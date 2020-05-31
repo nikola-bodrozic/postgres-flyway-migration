@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  postgres-db:
+    container_name: pgdbserver
+    image: postgres:9.3
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=psgpass
+
+  flyway-migrator:
+    image: gsengun/flyway-postgres:1.4
+    volumes:
+      - ./sql:/flyway/sql
+    depends_on:
+      - postgres-db
+    command: postgres-db 5432 postgres psgpass postgres public
