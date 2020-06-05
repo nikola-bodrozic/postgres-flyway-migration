@@ -2,6 +2,8 @@
 
 `docker-compose up`
 
+in second terminal
+
 `docker exec -it pgdbserver bash`
 
 `psql -U postgres`
