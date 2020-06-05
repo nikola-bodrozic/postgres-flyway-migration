@@ -1,13 +1,13 @@
 # Running migrations on database server using Flyway
 
-docker-compose up
+`docker-compose up`
 
-docker exec -it pgdbserver bash
+`docker exec -it pgdbserver bash`
 
-psql -U postgres
+`psql -U postgres`
 
-\c postgres
+`\c postgres`
 
-select * from account;
+`select * from account;`
 
-SELECT * FROM schema_version;
+`SELECT * FROM schema_version;`
