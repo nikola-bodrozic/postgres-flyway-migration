@@ -1,12 +1,16 @@
 # Running migrations on database server using Flyway
 
-Rename file `.env.default` to `.env` and place your PostgreSQL password.  Then
+Rename file `.env.default` to `.env` and place your PostgreSQL password.
 
-`docker-compose up`
+Then
+
+```shell
+docker-compose up
+```
 
 in second terminal
 
-shell```
+```shell
 docker exec -it pgdbserver bash
 root@3244455842a2:/# psql -U postgres
 postgres=# \c postgres
@@ -17,3 +21,4 @@ postgres=# select * from account;
        1 | foo
 (1 row)
 ```
+
